@@ -7,7 +7,7 @@
 
 
 \documentclass{beamer}
-% \usepackage{ctex} % for Chinese support
+\usepackage{ctex} % for Chinese support
 \usepackage{fontspec}
 \usepackage{listings}
 \usepackage{tikz}
@@ -190,7 +190,7 @@
 \begin{enumerate}
 	\item Cache Organization: simutations and optimizations
 	\item Locality
-	\item Substitution Policies
+	\item Placement \& Replacement Policy
 \end{enumerate}
 \end{frame}
 
@@ -209,15 +209,24 @@
 \end{frame}
 
 \begin{frame}{6 The Memory Hierarchy}
+	关于局部性(Locality)的描述，正确的是：
+
+	A. 数据的时间局部性或数据空间局部性，在任何有意义的程序中都能体现
+
+	B. 指令的时间局部性或指令空间局部性，在任何有意义的程序中都能体现
+
+	C. 数据的时间局部性，在任何循环操作中都能体现
+	
+	D. 数据的空间局部性，在任何数组操作中都能体现
 	\only<1> {
-		\begin{tikzpicture}
-			\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=\textwidth]{figures/6-1.jpeg}};
-		\end{tikzpicture}
+		% \begin{tikzpicture}
+		% 	\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=\textwidth]{figures/6-1.jpeg}};
+		% \end{tikzpicture}
 	}
 	\only<2> {
 		\begin{tikzpicture}
-			\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=\textwidth]{figures/6-1.jpeg}};
-			\node[rectangle,draw,red] (r) at (10,-1) {CD};
+			% \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=\textwidth]{figures/6-1.jpeg}};
+			\node[rectangle,draw,red] (r) at (15,0) {B};
 		\end{tikzpicture}
 	}
 \end{frame}
