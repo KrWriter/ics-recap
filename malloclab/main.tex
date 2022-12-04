@@ -32,14 +32,64 @@
 \frame{\titlepage}}
 
 \begin{frame}{Outline}
+\begin{enumerate}
+	\item 思路
+	\item 实现
+	\item Tricks
+\end{enumerate}
+\end{frame}
 
+\begin{frame}{思路}
+\begin{enumerate}
+	\item 隐式空闲链表
+	\item 显式空闲链表
+		\begin{enumerate}
+			\item 简单分离存储
+			\item 分离适配
+			\item 伙伴系统
+		\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{实现}
+\begin{enumerate}
+	\item \texttt{mm\_init}, \texttt{malloc}, \texttt{free}, \dots
+	\item helper functions
+		\begin{enumerate}
+			\item \texttt{extend\_heap}
+			\item \texttt{coalesce}
+			\item \texttt{place}
+			\item \dots
+		\end{enumerate}
+	\item \texttt{mm\_checkheap}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{实现-1}
+	
+\end{frame}
+
+\begin{frame}{实现-2}
+
+\end{frame}
+
+\begin{frame}{实现-3}
+	
+\end{frame}
+
+\begin{frame}{Tricks}
+	\begin{enumerate}
+		\item 去脚部
+		\item 压指针
+		\item address order
+		\item 红黑树
+		\item \dots
+	\end{enumerate}
 \end{frame}
   
 \begin{frame}{}
 \begin{center}
 	\textbf{Thank you for your attention!}
-
-	\textbf{Wish you good luck!}
 \end{center}
 \end{frame}
 
